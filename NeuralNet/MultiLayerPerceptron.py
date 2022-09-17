@@ -80,9 +80,9 @@ class MLP:
         @return: output for the layer
         """
         a1 = np.array(xs).reshape(1, len(xs))
-        z2 = ((self.w2).T.dot(a1.T) + self.b2).T
+        z2 = (self.w2.T.dot(a1.T) + self.b2).T
         a2 = self.activation(z2)
-        z3 = ((self.w3.T).dot(a2.T) + self.b3).T
+        z3 = (self.w3.T.dot(a2.T) + self.b3).T
         a3 = self.activation(z3)
         return a3
 
